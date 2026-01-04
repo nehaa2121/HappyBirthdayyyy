@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday</title>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    background: #0e0e0e;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+/* PAGE SECTIONS */
+#page1, #page2 {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#page1 { display: flex; }
+
+/* Happy Birthday Text */
+h1 {
+    font-size: 65px;
+    color: #ff7bbd;
+    text-shadow: 0 0 20px #ff7bbd;
+    margin-bottom: 20px;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 15px 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4081;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff2c71;
+    transform: scale(1.07);
+}
+
+/* Balloons */
+.balloon {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: #ff6fa3;
+    border-radius: 50%;
+    animation: floatBalloon 6s infinite ease-in-out;
+}
+
+@keyframes floatBalloon {
+    0% { transform: translateY(120vh); }
+    100% { transform: translateY(-200px); }
+}
+
+/* Confetti */
+.confetti {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: yellow;
+    animation: fallConfetti 4s infinite linear;
+}
+
+@keyframes fallConfetti {
+    0% { transform: translateY(-20px) rotate(0deg); }
+    100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* LETTER PAGE */
+.letter-box {
+    width: 85%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.07);
+    padding: 40px;
+    border-radius: 20px;
+    line-height: 1.8;
+    overflow-y: auto;
+    height: 90vh;
+}
+
+.line {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin: 25px 0;
+}
+
+.heart {
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ff6fa3;
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: Birthday Animation -->
+<div id="page1">
+    <h1>Happy Birthday Shubhu...❤️🎉</h1>
+    <button onclick="openLetter()">Open Letter 💌</button>
+</div>
+
+<!-- PAGE 2: LETTER -->
+<div id="page2">
+    <div class="letter-box">
+        <div class="heart">❤️</div>
+        <h1 style="text-align:center;">Happy Birthday</h1>
+
+        <p>Aajcha divs khup  khas aahe… karn aaj tujha birthday aahe. Kahi lok ayushyat  yetat, pn tyanchya aathvani manat ekdum shant, soft panane basun rahtat. Tujhya nav aiktach yetoch ek halka smile… konalahi nhi kalnr  pn mala mahit aahe kse vatte.</p>
+
+        <div class="line"></div>
+
+        <p>Tula mahit nasel kadhachit, pn tu bolto na… tyat hi ek veglich warmth asto. Tujhi thodi silent nature, thodi cold vibe… pn khrch sangaych tr, tyachyat ek veglich softness aahe ji fkt mala diste.</p>
+
+        <div class="line"></div>
+
+        <p>Manapasun sangte… tu jra kami boltos, pn tu jya  veli jst free houn  boltos… te majhe divas banvte. Kahi lok words ne express krtat, ani kahi lok presence ne. Tu veglach aahe… silent pn strong, dur pn jawal.</p>
+
+        <div class="line"></div>
+
+        <p>Aaj tujhya birthday la, me tujhasathi ekch wish krte— jithe jashil tithe shant ta milo, jya dreams sathi ladhtos te purn hovot, ani tujhya life madhe nehmi love, peace ani clarity raho.</p>
+
+        <div class="line"></div>
+
+        <p>Thanks… for being this soft, unexpected, yet important part of my world. Tujhya sarkha person nahi kuthehi nahi bhetnr. Aani yes… तू माझ्यासाठी आजही special aahe.</p>
+
+        <h1 style="margin-top: 40px; text-align:center;">Happy Birthday, once again. 🎂✨</h1>
+    </div>
+</div>
+
+
+<script>
+// Switch to letter page
+function openLetter() {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "flex";
+}
+
+// Create balloons
+for (let i = 0; i < 12; i++) {
+    let b = document.createElement("div");
+    b.className = "balloon";
+    b.style.left = Math.random() * 100 + "vw";
+    b.style.background = ["#ff6fa3","#ffca5f","#6fc1ff"][Math.floor(Math.random()*3)];
+    b.style.animationDuration = (5 + Math.random()*5) + "s";
+    document.body.appendChild(b);
+}
+
+// Create confetti
+for (let i = 0; i < 80; i++) {
+    let c = document.createElement("div");
+    c.className = "confetti";
+    c.style.left = Math.random() * 100 + "vw";
+    c.style.background = ["#ff4d4d","#ffe066","#5edfff","#b47fff"][Math.floor(Math.random()*4)];
+    c.style.animationDuration = (3 + Math.random()*3) + "s";
+    document.body.appendChild(c);
+}
+</script>
+
+</body>
+</html>
