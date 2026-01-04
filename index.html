@@ -11,14 +11,15 @@
     }
     p{
         font-size: 16px;
+        color:#444;
     }
 body {
     margin: 0;
     padding: 0;
-    background: #0e0e0e;
+    background: linear-gradient(135deg, #eef4ff,#f8fbff);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-    color: #fff;
+    color: #2b2b2b;
 }
 
 /* PAGE SECTIONS */
@@ -36,8 +37,8 @@ body {
 /* Happy Birthday Text */
 h1 {
     font-size: 65px;
-    color: #ff7bbd;
-    text-shadow: 0 0 20px #ff7bbd;
+    color: #1f4fd8;
+    text-shadow: none;
     margin-bottom: 20px;
 }
 
@@ -48,14 +49,14 @@ button {
     font-size: 20px;
     border: none;
     border-radius: 30px;
-    background: #ff4081;
+    background: #1f4fd8;
     color: #fff;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #ff2c71;
+    background: #173bb0;
     transform: scale(1.07);
 }
 
@@ -92,12 +93,13 @@ button:hover {
 .letter-box {
     width: 85%;
     max-width: 900px;
-    background: rgba(255,255,255,0.07);
+    background: #ffffff;
     padding: 40px;
     border-radius: 20px;
     line-height: 1.8;
     overflow-y: auto;
     height: 90vh;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
 .line {
@@ -127,15 +129,17 @@ button:hover {
         <div class="heart">❤️</div>
         <h1 style="text-align:center;">Happy Birthday</h1>
 
-        <p>Aajcha divs khup  khas aahe… karn aaj tujha birthday aahe. Kahi lok ayushyat  yetat, pn tyanchya aathvani manat ekdum shant, soft panane basun rahtat. Tujhya nav aiktach yetoch ek halka smile… konalahi nhi kalnr  pn mala mahit aahe kse vatte.</p>
+        <p>Aajcha divs khup  khas aahe… karn aaj tujha birthday aahe 😁.</p>
 
         <div class="line"></div>
 
-        <p>Tula mahit nasel kadhachit, pn tu bolto na… tyat hi ek veglich warmth asto. Tujhi thodi silent nature, thodi cold vibe… pn khrch sangaych tr, tyachyat ek veglich softness aahe ji fkt mala diste.</p>
+        <p>Tula mahit nasel kadhachit, pn tu bolto na… tyat hi ek veglich warmth aste. Tujhi thodi silent nature, thodi cold vibe… pn khrch sangaych tr, tyachyat ek veglich softness aahe ji fkt mala diste. </p>
 
         <div class="line"></div>
 
-        <p>Manapasun sangte… tu jra kami boltos, pn tu jya  veli jst free houn  boltos… te majhe divas banvte. Kahi lok words ne express krtat, ani kahi lok presence ne. Tu veglach aahe… silent pn strong, dur pn jawal.</p>
+        <p>Manapasun sangte… tu jra kami boltos, pn tu jya  veli jst free houn  boltos… te majhe divas banvte ani me ajun tujha kde comfortable ani  jast khush aste. Tujhi smile rare aahe,
+pn jevha  ti yete na…
+tevha sagla stress moment madhe vanish hoto 😁</p>
 
         <div class="line"></div>
 
@@ -143,7 +147,7 @@ button:hover {
 
         <div class="line"></div>
 
-        <p>Thanks… for being this soft, unexpected, yet important part of my world. Tujhya sarkha person nahi kuthehi nahi bhetnr. Aani yes… तू माझ्यासाठी आजही special aahe.</p>
+        <p>Thanks… for being this soft, unexpected, yet important part of my world. Tujhya sarkha person nahi kuthehi nahi bhetnr. Aani yes… तू माझ्यासाठी आजही special aahe.😚</p>
 
         <h1 style="margin-top: 40px; text-align:center;">Happy Birthday, once again. 🎂✨</h1>
     </div>
@@ -162,7 +166,7 @@ for (let i = 0; i < 12; i++) {
     let b = document.createElement("div");
     b.className = "balloon";
     b.style.left = Math.random() * 100 + "vw";
-    b.style.background = ["#ff6fa3","#ffca5f","#6fc1ff"][Math.floor(Math.random()*3)];
+    b.style.background = ["#4f7cff","#6c757d","#adb5bd"][Math.floor(Math.random()*3)];
     b.style.animationDuration = (5 + Math.random()*5) + "s";
     document.body.appendChild(b);
 }
